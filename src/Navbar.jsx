@@ -2,15 +2,8 @@
 function Navbar(){
     return(
         <div>
-            <header>
-                <h1>Hello</h1>
-            </header>
+            <h1>Hello</h1>
         </div>
     )
-        
-        
-        
-        
-    
 }
 export default Navbar;
