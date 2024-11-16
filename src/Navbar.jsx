@@ -3,11 +3,13 @@ import "./Navbar.css";
 function Navbar(){
     
     return(
-        <aside className="sidebar">
+        <div className="sidebar">
             <form>
-                
+                <input type="number" placeholder="Latitude"></input>
+                <input type="number" placeholder="Longitude"></input>
+                <button type="submit">Submit</button>   
             </form>
-        </aside>
+        </div>
     )
 }
 export default Navbar;

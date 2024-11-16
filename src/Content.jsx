@@ -1,7 +1,11 @@
 import "./Content.css"
-function Content(){
+import GetData from "./GetData";
+function  Content(){
+    
+
     return(
         <div className="container">
+            
 
         </div>
     )
