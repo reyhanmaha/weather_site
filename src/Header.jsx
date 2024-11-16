@@ -1,8 +1,8 @@
-
+import "./Header.css";
 
 function Header(){
     return(
-        <header>
+        <header className="header">
             <h1>Weather Site</h1>
         </header>
     )

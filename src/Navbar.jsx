@@ -1,9 +1,13 @@
-
+//import { useRef,useState } from "react";
+import "./Navbar.css";
 function Navbar(){
+    
     return(
-        <div>
-            <h1>Hello</h1>
-        </div>
+        <aside className="sidebar">
+            <form>
+                
+            </form>
+        </aside>
     )
 }
 export default Navbar;

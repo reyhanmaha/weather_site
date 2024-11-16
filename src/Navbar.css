@@ -1,0 +1,7 @@
+.sidebar{
+    display: flexbox;
+    background-color: rgb(215, 228, 211);
+    height:20rem;
+    width: 25rem;
+    border-radius: 1rem;
+}
