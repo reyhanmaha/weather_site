@@ -2,48 +2,32 @@ import "./Content.css"
 import axios from "axios";
 //import React,{Suspense} from "react";
 //import GetData from "./GetData";
-import React,{useEffect,useState} from "react";
+import {useEffect,useState} from "react";
 //const AsyncComponent = React.lazy(() => import('./GetData'));
 function Content(){
     const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(()=>{
-        async function GetData(){
-            //let data;
-            
-            const options = {
-            method: 'GET',
-            url: 'https://open-weather13.p.rapidapi.com/city/fivedaysforcast/30.438/-89.1028',
-            headers: {
-                'x-rapidapi-key': '1942c9e20cmshed1754f2cb0a7d9p16ebe7jsn386a2f493715',
-                'x-rapidapi-host': 'open-weather13.p.rapidapi.com'
-            }
-            };
-            try {
-                const response = await axios.request(options);
-                console.log(response.data);
-                setData(response.data);
-                //return data=response.data;
-            } catch (error) {
-                setLoading(false);
-                console.error(error);
-            }
+   
+      const options = {
+        method: 'GET',
+        url: 'https://meteostat.p.rapidapi.com/stations/monthly',
+        params: {
+          station: '10637',
+          start: '2020-01-01',
+          end: '2020-12-31'
+        },
+        headers: {
+          'x-rapidapi-key': '1942c9e20cmshed1754f2cb0a7d9p16ebe7jsn386a2f493715',
+          'x-rapidapi-host': 'meteostat.p.rapidapi.com'
         }
-        GetData();
-    },[]);
-
-    if (loading) {
-        return <div>Loading...</div>;
-      }
-    
-      if (!data) {
-        return <div>No data available</div>;
-      }
-      
+      };
+      useEffect(() => {
+        axios.request(options)
+          .then((response) => setData(response.data))
+          .catch((error) => console.error('Error:', error));
+      }, []);
       return(
         <div className="container">
-            <p>{data}</p>
+            {data ? <pre>{JSON.stringify(data, null, 2)}</pre> : <p>Loading...</p>}
 
         </div>
     )
