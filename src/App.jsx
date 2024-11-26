@@ -1,5 +1,5 @@
 import './App.css'
-import Navbar from './Navbar'
+import Form from './Form'
 import Header from './Header'
 import Content from './Content'
 function App() {
@@ -8,7 +8,7 @@ function App() {
       <div className='mainPage'>
         <Header/>
         <div className='infoSection'>
-        <Navbar/>
+        <Form/>
         <Content/>
         </div>
       </div>

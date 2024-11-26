@@ -1,0 +1,62 @@
+.sidebar{
+    display: block;
+    background-color: rgb(215, 228, 211);
+    height:20rem;
+    width: 25rem;
+    border-radius: 1rem;
+}
+.sidebar label{
+    font-size: small;
+
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+#dataBtn{
+    width: 10rem;
+    height: 2rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-left: 25%;
+    position: relative;
+    border: none;
+    transition: .4s ease-in;
+    z-index: 1;
+}
+#dataBtn::before,
+#dataBtn::after{
+    position: absolute;
+    content: "";
+    z-index: -1;
+}
+#dataBtn::after{
+    height: 100%;
+    background-color: rgb(142, 161, 175);
+    left: -15%;
+    top: 0;
+    transform: skew(180deg);
+    transition-duration: 1.0s;
+    transform-origin: top left;
+    width: 0;
+}
+#dataBtn:hover:after{
+    height: 100%;
+    width: 115%;
+}
+#lat{
+    margin-top: 1rem;
+}
+#long{
+    margin-top: 1rem;
+}
+#elv{
+    margin-top: 1rem;
+}
+#begin{
+    margin-top: 1rem;
+}
+#end{
+    margin-top: 1rem;
+}
+#tz{
+    margin-top: 1rem;
+}
