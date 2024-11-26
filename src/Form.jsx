@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Content from "./Content";
 import "./Form.css";
 function Form(){
     const [userData,setInputs]= useState({});
@@ -11,7 +12,7 @@ function Form(){
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(userData)
+        console.log(userData);
       }
       
     return(
@@ -37,6 +38,7 @@ function Form(){
                 <br/>
                 <button id="dataBtn" type="submit">Search</button>   
             </form>
+            <Content info={userData}/>
         </div>
     )
 }

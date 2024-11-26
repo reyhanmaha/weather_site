@@ -5,7 +5,7 @@ import * as d3 from "d3";
 //import GetData from "./GetData";
 import {useEffect,useState} from "react";
 //const AsyncComponent = React.lazy(() => import('./GetData'));
-function Content(){
+function Content(props){
     const [data, setData] = useState(null);
       const options = {
         method: 'GET',
@@ -29,7 +29,9 @@ function Content(){
       
       return(
         <div className="container">
-            {data ? <pre>{JSON.stringify(data, null, 2)}</pre> : <p>Loading...</p>}
+          <p>{props.info.lat}</p>
+          {data ? <pre>{JSON.stringify(data, null, 2)}</pre> : <p>Loading...</p>}
+            
         </div>
     )
 }
