@@ -1,10 +1,12 @@
 .container{
     background-color: #d1d1d1;
-    width: 70rem;
     height: 35rem;
-    margin-left: 5rem;
     border-radius: 1rem;
+    /*
+    width: 50rem;
+    margin-left: 5rem;
+    */
 }
 .searchField{
-    display: block;
+    
 }

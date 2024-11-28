@@ -1,9 +1,11 @@
 .sidebar{
-    display: block;
     background-color: rgb(215, 228, 211);
-    height:20rem;
-    width: 25rem;
     border-radius: 1rem;
+    height:20rem;
+    /*
+    display: inline-block;
+    width: 25rem;
+    */
 }
 .sidebar label{
     font-size: small;

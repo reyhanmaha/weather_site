@@ -16,13 +16,14 @@ function Form(){
       }
       
     return(
-        <div className="sidebar">
+        <>
+        <div className="sidebar grid-item">
             <form onSubmit={handleSubmit}>
                 <label htmlFor="lat">Enter Latitute</label>
-                <input type="number" id="lat" name="lat" value={userData.latitude} placeholder="Latitude" onChange={handleChange} required></input>
+                <input type="number" id="lat" name="lat" value={userData.latitude} placeholder="Latitude" step="any" onChange={handleChange} required></input>
                 <br/>
                 <label htmlFor="long">Enter Longitude</label>
-                <input type="number" id="long" name="long" value={userData.longitude} placeholder="Longitude" onChange={handleChange} required></input>
+                <input type="number" id="long" name="long" value={userData.longitude} placeholder="Longitude" step="any" onChange={handleChange} required></input>
                 <br/>
                 <label htmlFor="elv">Enter Elevation</label>
                 <input type="number" id="elv" name="elv" value={userData.elevation} placeholder="Elevation" onChange={handleChange}></input>
@@ -38,8 +39,11 @@ function Form(){
                 <br/>
                 <button id="dataBtn" type="submit">Search</button>   
             </form>
+        </div>
+        <div className="grid-item">
             <Content info={userData}/>
         </div>
+        </>
     )
 }
 export default Form;
